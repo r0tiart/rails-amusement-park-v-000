@@ -53,6 +53,8 @@ group :production do
   gem "pg"
   gem "google-analytics-rails"
   gem "rails_12factor"
+  gem 'web-console'
+
 end
 
 gem "bootstrap-sass", "~> 3.1.1"

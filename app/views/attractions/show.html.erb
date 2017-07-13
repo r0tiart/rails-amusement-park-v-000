@@ -1,0 +1,15 @@
+<%= render partial: "show", locals: {attraction: @attraction} if !current_user.admin%>
+<% if current_user.admin %>
+
+<div class="info">
+
+    <p><strong><%= "Name: #{@attraction.name}" %></strong> </p>
+    <p><strong><%= "Ticket Requirement: #{@attraction.tickets}" %></strong></p>
+    <p><strong><%= "Height Requirement: #{@attraction.min_height} inches" %></strong></p>
+    <p><strong><%= "Nausea Rating: #{@attraction.nausea_rating }" %></strong></p>
+    <p><strong><%= "Happiness Rating: #{@attraction.happiness_rating}" %></strong></p>
+    <%= link_to "Edit Attraction", edit_attraction_path(@attraction) %>
+    <%= link_to "Back", attractions_path %>
+  </div>
+
+<% end %>
